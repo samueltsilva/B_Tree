@@ -12,7 +12,6 @@ private:
     int n;
     bool folha;
 
-
 public:
     //Construtor, acessores
     No_Arvore_B(int _t, bool _folha);
@@ -25,7 +24,6 @@ public:
 
     //método procurar
     No_Arvore_B* procurar(int k);
-
 
     //métodos inserir
     No_Arvore_B operator=(No_Arvore_B** c);
@@ -67,37 +65,31 @@ void No_Arvore_B::setChaves(int _pos, int _k) {
 //Seta a quantidade de chaves na página
 void No_Arvore_B::setN(int _n) {
     n = _n;
-
 }
 
 //Retorna a quantidade de chaves na página
 int No_Arvore_B::getN() {
     return n;
-
 }
 
 //Retorna uma chave na posição i da página
 int No_Arvore_B::getChaves(int i) {
     return chaves[i];
-
 }
 
 //Seta um filho para ser raiz
 void No_Arvore_B::setC(int _pos2, No_Arvore_B* raiz) {
     c[_pos2] = raiz;
-
 }
 
 //inserir a chave k no filho de s
 void No_Arvore_B::setC2(No_Arvore_B* s, int i, int _k) {
     s->c[i]->insert_non_full(_k);
-
 }
 
 //Retorna se é folha
 bool No_Arvore_B::getFolha() {
     return folha;
-
 }
 
 //Método para percorrer a árvore
@@ -112,7 +104,6 @@ void No_Arvore_B::percorrer() {
 
     if (folha == false)
         c[i]->percorrer();
-
 }
 
 //Procura uma chave k na página
@@ -128,7 +119,6 @@ No_Arvore_B* No_Arvore_B::procurar(int k) {
         return NULL; //Se não encontrar na página, retorna null
 
     return c[i]->procurar(k); //Desce para a próxima pagina para procurar
-
 
 }
 
@@ -276,10 +266,6 @@ void No_Arvore_B::remover_nao_folha(int aux) {
 }
 
 
-
-
-
-
 //Esse método pega o predecessor
 int No_Arvore_B::pegar_predecessor(int pos) {
     No_Arvore_B* pagina_aux;
@@ -291,7 +277,6 @@ int No_Arvore_B::pegar_predecessor(int pos) {
     return pagina_aux->chaves[pagina_aux->n - 1];
 
 }
-
 
 //Esse método pega o sucessor
 int No_Arvore_B::pegar_sucessor(int pos) {
@@ -421,10 +406,6 @@ void No_Arvore_B::juntar(int pos) {
 
     delete(irmao);
     return;
-
-
-
-
 
 }
 

@@ -3,7 +3,6 @@
 #include "Arvore.h"
 #include <Locale.h>
 
-
 using namespace std;
 
 int main()

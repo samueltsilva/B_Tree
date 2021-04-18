@@ -2,7 +2,6 @@
 #define ARVORE_H_INCLUDED
 #include "NoArvoreB.h"
 
-
 using namespace std;
 
 //Classe da árvore
@@ -60,12 +59,7 @@ void Arvore_B::inserir(int k) {
             raiz->insert_non_full(k); //Se a raiz não está vazia nem cheia, somente insira o valor
 
     }
-
-
-
-
 }
-
 
 //Função primária de remoção. Recebe a chave que precisa ser removida e acessa as métodos em NoArvoreB.h
 //para remover e tratar a árvore
@@ -90,6 +84,5 @@ void Arvore_B::remover(int k) {
     return;
 
 }
-
 
 #endif // ARVORE_H_INCLUDED
